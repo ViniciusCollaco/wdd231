@@ -1,0 +1,84 @@
+/* -----------------ESQUEMA DE CORES --------------------
+terra cotta #E07A5F  
+deep slade blue #3D405B*/
+
+/**************** WEBSITE *********************/
+* {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+/**************** CABECALHO *********************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 8px;
+    align-items: end;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #3D405B;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::after {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::after {
+    content: "\00D7";
+}
+
+/**************** NAVEGAÇÃO *********************/
+
+.navegacao {
+    display: none;
+}
+
+.navegacao.show {
+    display: block;
+}
+
+.navegacao ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao a{
+    display: block;
+    padding: .8rem 10px;
+    color: #3D405B;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navegacao li.atual {
+    background-color: #eee;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+.navegacao a:hover {
+    background-color: #E07A5F;
+}

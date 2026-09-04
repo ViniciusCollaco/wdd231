@@ -1,0 +1,180 @@
+:root {
+    --primary-color: #1a252f;
+    --accent-color: #2c3e50;
+    --completed-bg: #d4edda;
+    --completed-text: #155724;
+    --pending-bg: #f8d7da;
+    --pending-text: #721c24;
+    --light-bg: #f4f4f9;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#menu-hamburguer {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+nav li a:hover, nav li a.active {
+    background-color: var(--accent-color);
+}
+
+main {
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.card p {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+.foto-container {
+    padding: 15px;
+    text-align: center;
+}
+
+.foto-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 15px 0 15px;
+}
+
+.btn-filtro {
+    padding: 8px 16px;
+    border: 1px solid var(--primary-color);
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn-filtro.active, .btn-filtro:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.grid-cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.curso-card {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.curso-card.completed {
+    background-color: var(--completed-bg);
+    color: var(--completed-text);
+    border: 1px solid var(--completed-text);
+}
+
+.curso-card.pending {
+    background-color: var(--pending-bg);
+    color: var(--pending-text);
+    border: 1px solid var(--pending-text);
+}
+
+.creditos {
+    text-align: center;
+    font-weight: bold;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}

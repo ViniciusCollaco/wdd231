@@ -1,20 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Página Inicial do Curso WDD 231 - Vinicius de Oliveira Collaço.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+    <title>Página Inicial | WDD 231</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/maior.css">
 
-    <script src="scripts/curso.js" defer></script>
-    <script src="scripts/data.js" defer></script>
     <script src="scripts/navegacao.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/curso.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+        <div class="header-container">
+            <img src="imagens/logo.svg" alt="Logotipo do Site" class="logo" width="40" height="40">
+            <span>Vinicius de Oliveira Collaço</span>
+            <button id="menu-hamburguer" aria-label="Abrir Menu de Navegação">☰</button>
+        </div>
+        <nav id="menu-navegacao">
+            <ul>
+                <li><a href="index.html" class="active">Página Inicial</a></li>
+                <li><a href="#">Projeto da Câmara</a></li>
+                <li><a href="#">Projeto Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Página Inicial</h1>
+
+        <div class="grid-container">
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Meu nome é Vinicius de Oliveira Collaço. Sou estudante do curso de Desenvolvimento de Software na BYU-Idaho e atuo na área de tecnologia e sistemas. Tenho interesse em programação web, análise de dados e soluções de software que trazem impacto positivo.</p>
+            </section>
+
+            <section class="card">
+                <h2>Foto</h2>
+                <div class="foto-container">
+                    <img src="imagens/minha-foto.webp" alt="Foto de perfil de Vinicius Collaço" loading="lazy" width="300" height="300">
+                </div>
+            </section>
+        </div>
+
+        <section class="card certificados">
+            <h2>Cursos de Certificação Web</h2>
+            <div class="filtros">
+                <button id="btn-todos" class="btn-filtro active">Todos</button>
+                <button id="btn-cse" class="btn-filtro">CSE</button>
+                <button id="btn-wdd" class="btn-filtro">WDD</button>
+            </div>
+            
+            <div id="container-cursos" class="grid-cursos"></div>
+            
+            <p id="creditos-totais" class="creditos">O total de créditos pelos cursos acima é: <strong>0</strong></p>
+
+            <div class="redes-sociais">
+                <a href="https://github.com/ViniciusCollaco" target="_blank" aria-label="GitHub"><img src="imagens/github.svg" alt="GitHub" width="30" height="30"></a>
+                <a href="https://www.linkedin.com/in/viniciuscollaço" target="_blank" aria-label="LinkedIn"><img src="imagens/linkedin.svg" alt="LinkedIn" width="30" height="30"></a>
+                <a href="https://www.instagram.com/vini.collaco/" target="_blank" aria-label="Instagram"><img src="imagens/instagram.svg" alt="Instagram" width="30" height="30"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="anoAtual"></span> • Vinicius de Oliveira Collaço • Paraná, Brasil</p>
+        <p id="ultimaModificacao"></p>
+    </footer>
 </body>
 </html>

@@ -62,7 +62,7 @@ const courses = [
 ];
 
 const containerCursos = document.querySelector('#container-cursos');
-const creditosTotais = document.querySelector('#creditos-totais strong');
+const valorCreditos = document.querySelector('#valor-creditos');
 
 function renderizarCursos(listaCursos) {
     containerCursos.innerHTML = '';
@@ -74,8 +74,9 @@ function renderizarCursos(listaCursos) {
         containerCursos.appendChild(card);
     });
 
+    // Cálculo dinâmico do número total de créditos usando reduce()
     const total = listaCursos.reduce((acc, curso) => acc + curso.credits, 0);
-    creditosTotais.textContent = `${total} créditos`;
+    valorCreditos.textContent = total;
 }
 
 document.querySelector('#btn-todos').addEventListener('click', (e) => {
@@ -85,12 +86,12 @@ document.querySelector('#btn-todos').addEventListener('click', (e) => {
 
 document.querySelector('#btn-cse').addEventListener('click', (e) => {
     atualizarBotaoAtivo(e.target);
-    renderizarCursos(courses.filter(c => c.subject === 'CSE'));
+    renderizarCursos(courses.filter(curso => curso.subject === 'CSE'));
 });
 
 document.querySelector('#btn-wdd').addEventListener('click', (e) => {
     atualizarBotaoAtivo(e.target);
-    renderizarCursos(courses.filter(c => c.subject === 'WDD'));
+    renderizarCursos(courses.filter(curso => curso.subject === 'WDD'));
 });
 
 function atualizarBotaoAtivo(botaoClicado) {
@@ -98,4 +99,5 @@ function atualizarBotaoAtivo(botaoClicado) {
     botaoClicado.classList.add('active');
 }
 
+// Renderização inicial com todos os cursos
 renderizarCursos(courses);

@@ -1,6 +1,7 @@
 const url = 'https://byui-cse.github.io/cse-ww-program-pt/data/profetas-dos-ultimos-dias.json';
 const cartoes = document.querySelector('#cartoes');
 
+
 function formatarData(dataString) {
     if (!dataString) return 'N/A';
     
@@ -58,12 +59,18 @@ const exibirProfetas = (profetas) => {
         divInfo.appendChild(falecimento);
 
         let urlTratada = profeta.urlImagem.split('?')[0].split('&')[0];
+        urlTratada = urlTratada.replace(/\.bmp$/i, '.jpg');
+
+        if (!urlTratada.startsWith('http')) {
+            urlTratada = `https://${urlTratada}`;
+        }
 
         retrato.referrerPolicy = 'no-referrer';
 
-        retrato.setAttribute('src', urlTratada);
+        const urlProxy = `https://wsrv.nl/?url=${encodeURIComponent(urlTratada)}`;
+
+        retrato.setAttribute('src', urlProxy);
         retrato.setAttribute('alt', `Retrato de ${nomeProfeta}`);
-        retrato.setAttribute('loading', 'lazy');
         retrato.setAttribute('width', '340');
         retrato.setAttribute('height', '440');
 
@@ -71,7 +78,7 @@ const exibirProfetas = (profetas) => {
         retrato.onerror = function () {
             tentativa++;
             if (tentativa === 1) {
-                this.src = `https://wsrv.nl/?url=${encodeURIComponent(urlTratada)}`;
+                this.src = urlTratada;
             } else if (tentativa === 2) {
                 this.src = `https://images.weserv.nl/?url=${encodeURIComponent(urlTratada)}`;
             } else {

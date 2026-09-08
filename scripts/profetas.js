@@ -1,7 +1,6 @@
 const url = 'https://byui-cse.github.io/cse-ww-program-pt/data/profetas-dos-ultimos-dias.json';
 const cartoes = document.querySelector('#cartoes');
 
-// Função auxiliar para converter "AAAA-MM-DD" em "DD de MÊS de AAAA"
 function formatarData(dataString) {
     if (!dataString) return 'N/A';
     
@@ -43,7 +42,6 @@ const exibirProfetas = (profetas) => {
         const nomeProfeta = `${profeta.nome} ${profeta.sobrenome}`;
         nomeCompleto.textContent = nomeProfeta;
 
-        // Formatação das datas
         const dataNascFormatada = formatarData(profeta.nascimento);
         const falecimentoFormatado = profeta.morte ? formatarData(profeta.morte) : 'N/A';
 
@@ -59,36 +57,24 @@ const exibirProfetas = (profetas) => {
         divInfo.appendChild(anosServico);
         divInfo.appendChild(falecimento);
 
-        // Tratamento da URL: Remove parâmetros de query e corrige extensões .bmp para .jpg
         let urlTratada = profeta.urlImagem.split('?')[0].split('&')[0];
-        urlTratada = urlTratada.replace(/\.bmp$/i, '.jpg');
-
-        if (!urlTratada.startsWith('http')) {
-            urlTratada = `https://${urlTratada}`;
-        }
 
         retrato.referrerPolicy = 'no-referrer';
 
-        // Tentativa 1: Proxy wsrv.nl com a extensão e protocolo corrigidos
-        const urlProxy = `https://wsrv.nl/?url=${encodeURIComponent(urlTratada)}`;
-
-        retrato.setAttribute('src', urlProxy);
+        retrato.setAttribute('src', urlTratada);
         retrato.setAttribute('alt', `Retrato de ${nomeProfeta}`);
+        retrato.setAttribute('loading', 'lazy');
         retrato.setAttribute('width', '340');
         retrato.setAttribute('height', '440');
 
-        // Estrutura de Fallback em cascata
         let tentativa = 0;
         retrato.onerror = function () {
             tentativa++;
             if (tentativa === 1) {
-                // Tentativa 2: Tenta carregar a URL tratada direto sem referenciador
-                this.src = urlTratada;
+                this.src = `https://wsrv.nl/?url=${encodeURIComponent(urlTratada)}`;
             } else if (tentativa === 2) {
-                // Tentativa 3: Tenta via proxy alternativo (weserv)
                 this.src = `https://images.weserv.nl/?url=${encodeURIComponent(urlTratada)}`;
             } else {
-                // Exibe o quadro estilizado apenas se todas as tentativas falharem
                 this.onerror = null;
                 const quadroSubstituto = document.createElement('div');
                 quadroSubstituto.classList.add('imagem-indisponivel');

@@ -49,7 +49,6 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-/* Container de texto para recriar o retângulo interno do modelo */
 .info-box {
     border: 1px solid #ffffff;
     width: 100%;
@@ -66,7 +65,7 @@ section p {
 
 .rotulo {
     font-weight: bold;
-    color: #ffff00; /* Amarelo como no exemplo original */
+    color: #ffff00; 
 }
 
 section img {
@@ -85,7 +84,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Estilo para quando a imagem do profeta estiver indisponível */
 .imagem-indisponivel {
     width: 100%;
     max-width: 230px;

@@ -1,0 +1,58 @@
+[
+    {
+        "nome": "A.M Cortinas e Persianas",
+        "endereco": "Rua XV de Novembro, 1200 - Centro, Curitiba - PR",
+        "telefone": "(41) 3333-1000",
+        "website": "https://www.amcortinas.com.br",
+        "imagem": "amCortinas.webp",
+        "nivel": 3
+    },
+    {
+        "nome": "Elevadores Curitiba",
+        "endereco": "Av. Sete de Setembro, 4500 - Batel, Curitiba - PR",
+        "telefone": "(41) 3222-2000",
+        "website": "https://www.elevadorescuritiba.com.br",
+        "imagem": "elevadoreCuritiba.webp",
+        "nivel": 2
+    },
+    {
+        "nome": "TechParaná Soluções",
+        "endereco": "Rua Cândido de Abreu, 500 - Centro Cívico, Curitiba - PR",
+        "telefone": "(41) 3111-3000",
+        "website": "https://www.techparana.com.br",
+        "imagem": "techParana.webp",
+        "nivel": 3
+    },
+    {
+        "nome": "Café do Centro",
+        "endereco": "Rua das Flores, 100 - Centro, Curitiba - PR",
+        "telefone": "(41) 3444-4000",
+        "website": "https://www.cafedocentro.com.br",
+        "imagem": "cafeCentro.webp",
+        "nivel": 1
+    },
+    {
+        "nome": "Advocacia Collaço",
+        "endereco": "Av. Marechal Deodoro, 300 - Centro, Curitiba - PR",
+        "telefone": "(41) 3555-5000",
+        "website": "https://www.advocaciacollaco.com.br",
+        "imagem": "advocaciaCollaco.webp",
+        "nivel": 2
+    },
+    {
+        "nome": "Mercado das Ervas",
+        "endereco": "Av. Iguaçu, 1800 - Água Verde, Curitiba - PR",
+        "telefone": "(41) 3666-6000",
+        "website": "https://www.mercadodaservas.com.br",
+        "imagem": "mercadoErvas.webp",
+        "nivel": 1
+    },
+    {
+        "nome": "Oficina do Conhecimento",
+        "endereco": "Rua Engenheiros Rebouças, 1200 - Rebouças, Curitiba - PR",
+        "telefone": "(41) 3777-7000",
+        "website": "https://www.oficinadoconhecimento.com.br",
+        "imagem": "oficinaConhecimento.webp",
+        "nivel": 2
+    }
+]

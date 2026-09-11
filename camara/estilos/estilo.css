@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    background-color: #f4f6f8;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+#btnMenu {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 1rem;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+nav a.active, nav a:hover {
+    color: #ecc94b;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #1a365d;
+}
+
+.controles-view {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.controles-view button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #1a365d;
+    background-color: #ffffff;
+    color: #1a365d;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.controles-view button.active {
+    background-color: #1a365d;
+    color: #ffffff;
+}
+
+.view-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.view-grade .cartao-membro {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.view-grade img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.view-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.view-lista .cartao-membro {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-lista img {
+    display: none; 
+}
+
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.desenvolvedor-footer {
+    margin-top: 1rem;
+    border-top: 1px solid #2b6cb0;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    #btnMenu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.5rem;
+        padding-top: 0;
+    }
+}

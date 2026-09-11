@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página Inicial da Câmara de Comércio de Timbuktu">
-
-    <meta property="og:title" content="Câmara de Comércio de Timbuktu">
-    <meta property="og:description" content="Site da Câmara de Comércio de Timbuktu, para encontro de comerciantes, vendedores, agronomos, recursos humanos, impressas, micro empresas">
-    <meta property="og:image" content="https://t4.ftcdn.net/jpg/13/17/65/31/360_F_1317653166_CJt4shSbjIVh8D2kk9Qfv86qm1NdOKRS.jpg">
-    <meta property="og:url" content="https://viniciuscollaco.github.io/wdd231/camara">
-
+    <title>Diretório de Membros - Câmara de Comércio de Curitiba</title>
+    <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Curitiba. Encontre parceiros comerciais e serviços locais.">
     <meta name="author" content="Vinicius de Oliveira Collaço">
-    <link rel="icon" href="imagens/tituloLogo.svg">
-    <title>Câmara de Comércio de Timbuktu</title>
+
+    <meta property="og:title" content="Diretório de Membros - Câmara de Comércio de Curitiba">
+    <meta property="og:description" content="Conheça e conecte-se com as empresas associadas à Câmara de Comércio de Curitiba.">
+    <meta property="og:image" content="https://viniciuscollaco.github.io/wdd231/camara/imagens/og-image.jpg">
+    <meta property="og:url" content="https://viniciuscollaco.github.io/wdd231/camara/diretorio.html">
+
+    <link rel="icon" href="imagens/tituloLogo.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <div class="header-container">
+            <img src="imagens/logoPrincipal.webp" alt="Logo Câmara de Comércio de Curitiba" class="logo">
+            <div class="titulo-header">
+                <h1>Câmara de Comércio de Curitiba</h1>
+                <p>Fortalecendo o comércio local</p>
+            </div>
+        </div>
+        <button id="btnMenu" aria-label="Abrir Menu">&#9776;</button>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html" class="active">Diretório</a></li>
+                <li><a href="associe-se.html">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Diretório de Membros</h2>
+        
+        <div class="controles-view">
+            <button id="btnGrade" class="active">Grid ▦</button>
+            <button id="btnLista">Lista ☰</button>
+        </div>
+
+        <section id="conteinerMembros" class="view-grade"></section>
+    </main>
+
     <footer>
-        <p>&copy; <span id="anoAtual"></span> • Vinicius de Oliveira Collaço • Paraná, Brasil</p>
-        <p id="ultimaModificacao"></p>
+        <div class="info-footer">
+            <h3>Câmara de Comércio de Curitiba</h3>
+            <p>Rua XV de Novembro, 500 - Centro</p>
+            <p>Curitiba, PR - CEP 80020-310</p>
+            <p>contato@camaracuritiba.org.br | (41) 3000-0000</p>
+        </div>
+        <div class="desenvolvedor-footer">
+            <p>&copy; <span id="anoAtual"></span> • Vinicius de Oliveira Collaço • WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
     </footer>
+
+    <script src="scripts/diretorio.js"></script>
 </body>
 </html>

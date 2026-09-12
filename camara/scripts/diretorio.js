@@ -5,8 +5,9 @@ const btnMenu = document.querySelector('#btnMenu');
 const navMenu = document.querySelector('#navMenu');
 
 btnMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+    const estaAberto = navMenu.classList.toggle('open');
     btnMenu.classList.toggle('open');
+    btnMenu.setAttribute('aria-expanded', estaAberto);
 });
 
 const conteiner = document.querySelector('#conteinerMembros');
@@ -37,7 +38,7 @@ function exibirMembros(membros) {
         const niveis = { 1: 'Membro', 2: 'Prata', 3: 'Ouro' };
 
         cartao.innerHTML = `
-            <img src="imagens/empresas/${membro.imagem}" alt="Logo de ${membro.nome}" loading="lazy">
+            <img src="imagens/empresas/${membro.imagem}" alt="Logo de ${membro.nome}" loading="lazy" width="100" height="100">
             <h3>${membro.nome}</h3>
             <p class="endereco">${membro.endereco}</p>
             <p class="telefone">${membro.telefone}</p>

@@ -15,22 +15,23 @@ header {
     background-color: #0f2942; 
     color: #ffffff;
     padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
 }
 
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between; 
     gap: 1rem;
+    width: 100%;
 }
 
-.logo {
-    width: 50px;
-    height: auto;
+.titulo-header {
+    flex-grow: 1; 
+}
+
+.titulo-header h1 {
+    font-size: 1.25rem; 
+    line-height: 1.2;
 }
 
 #btnMenu {
@@ -39,7 +40,8 @@ header {
     border: none;
     color: #ffffff;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    margin-left: auto; 
 }
 
 nav {

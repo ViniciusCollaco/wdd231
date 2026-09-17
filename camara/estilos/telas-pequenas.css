@@ -5,20 +5,21 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
-    background-color: #f4f6f8;
+    font-family: 'Roboto', sans-serif;
+    color: #1a202c; 
+    background-color: #f7fafc;
     line-height: 1.6;
 }
 
 header {
-    background-color: #1a365d;
+    background-color: #0f2942; 
     color: #ffffff;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header-container {
@@ -33,11 +34,12 @@ header {
 }
 
 #btnMenu {
-    font-size: 1.8rem;
+    font-size: 2rem;
     background: none;
     border: none;
     color: #ffffff;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 nav {
@@ -58,13 +60,15 @@ nav a {
     display: block;
     color: #ffffff;
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 nav a.active, nav a:hover {
     color: #f6ad55;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 main {
@@ -75,7 +79,7 @@ main {
 
 h2 {
     margin-bottom: 1rem;
-    color: #1a365d;
+    color: #0f2942;
 }
 
 .controles-view {
@@ -85,17 +89,17 @@ h2 {
 }
 
 .controles-view button {
-    padding: 0.5rem 1rem;
-    border: 1px solid #1a365d;
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #0f2942;
     background-color: #ffffff;
-    color: #1a365d;
+    color: #0f2942;
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
 }
 
 .controles-view button.active {
-    background-color: #1a365d;
+    background-color: #0f2942;
     color: #ffffff;
 }
 
@@ -111,13 +115,22 @@ h2 {
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
 
 .view-grade img {
-    max-width: 100px;
+    max-width: 120px;
     height: auto;
     margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.cartao-membro a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #1a56db;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .view-lista {
@@ -141,7 +154,7 @@ h2 {
 }
 
 footer {
-    background-color: #1a365d;
+    background-color: #0f2942;
     color: #ffffff;
     text-align: center;
     padding: 2rem 1rem;
@@ -153,21 +166,4 @@ footer {
     border-top: 1px solid #2b6cb0;
     padding-top: 1rem;
     font-size: 0.9rem;
-}
-
-@media (min-width: 768px) {
-    #btnMenu {
-        display: none;
-    }
-
-    nav {
-        display: block;
-        width: auto;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 1.5rem;
-        padding-top: 0;
-    }
 }

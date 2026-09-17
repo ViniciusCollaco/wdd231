@@ -32,7 +32,7 @@ function exibirMembros(membros) {
     conteiner.innerHTML = ''; 
     
     membros.forEach(membro => {
-        const cartao = document.createElement('section');
+        const cartao = document.createElement('div');
         cartao.classList.add('cartao-membro');
 
         const niveis = { 1: 'Membro', 2: 'Prata', 3: 'Ouro' };

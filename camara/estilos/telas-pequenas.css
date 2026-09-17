@@ -12,36 +12,45 @@ body {
 }
 
 header {
-    background-color: #0f2942; 
+    background-color: #0f2942;
     color: #ffffff;
     padding: 1rem;
 }
 
 .header-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; 
     justify-content: space-between; 
-    gap: 1rem;
     width: 100%;
 }
 
-.titulo-header {
-    flex-grow: 1; 
+.logo-e-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .titulo-header h1 {
-    font-size: 1.25rem; 
+    font-size: 1.3rem;
+    margin: 0;
     line-height: 1.2;
 }
 
+.titulo-header p {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    color: #d1d5db;
+}
+
 #btnMenu {
-    font-size: 2rem;
     background: none;
     border: none;
     color: #ffffff;
+    font-size: 2.2rem;
+    line-height: 1;
     cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    margin-left: auto; 
+    padding: 0;
+    margin: 0;
 }
 
 nav {

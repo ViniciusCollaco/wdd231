@@ -19,9 +19,10 @@ header {
 
 .header-container {
     display: flex;
-    align-items: flex-start; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap; 
 }
 
 .logo-e-titulo {
@@ -31,7 +32,7 @@ header {
 }
 
 .titulo-header h1 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin: 0;
     line-height: 1.2;
 }
@@ -54,10 +55,9 @@ header {
 }
 
 nav {
-    width: 100%;
+    width: 100%; 
     display: none;
 }
-
 nav.open {
     display: block;
 }

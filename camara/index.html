@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Câmara de Comércio de Timbuktu</title>
+    <meta name="description" content="Página inicial da Câmara de Comércio de Timbuktu. Informações de negócios locais, eventos e tempo.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagens/titulo-logo.svg" type="image/x-icon">
+
+
+    <meta property="og:title" content="Início - Câmara de Comércio de Timbuktu">
+    <meta property="og:description" content="Página inicial com previsão do tempo, eventos e empresas em destaque.">
+    <meta property="og:image" content="https://viniciuscollaco.github.io/wdd231/camara/imagens/og-image.webp">
+    <meta property="og:url" content="https://viniciuscollaco.github.io/wdd231/camara/index.html">
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css" media="(min-width: 768px)">
+
+    <script src="scripts/inicio.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-e-titulo">
+                <img src="imagens/logo-principal.webp" alt="Logo Câmara de Comércio de Timbuktu" class="logo" width="50" height="50">
+                <div class="titulo-header">
+                    <h1>Câmara de Comércio de Timbuktu</h1>
+                    <p>Fortalecendo o comércio local</p>
+                </div>
+            </div>
+
+            <button id="btnMenu" aria-label="Abrir Menu de Navegação" aria-expanded="false">&#9776;</button>
+            
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="diretorio.html">Diretório</a></li>
+                    <li><a href="associe-se.html">Associe-se</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-inicio">
+        <section class="hero-container">
+            <img src="imagens/hero.webp" alt="Visão da Câmara de Comércio de Timbuktu" class="hero-img" width="1200" height="500">
+            <div class="cta-overlay">
+                <h2>Faça Parte da Nossa Rede</h2>
+                <a href="associe-se.html" class="btn-cta">Associe-se Agora</a>
+            </div>
+        </section>
+
+        <h2 class="titulo-boas-vindas">Bem-vindo à Câmara de Comércio de Timbuktu</h2>
+
+        <section class="cartao-inicio eventos">
+            <h3>Eventos Atuais</h3>
+            <ul>
+                <li><strong>Feira de Negócios Locais:</strong> Próxima Sexta-feira, às 14h.</li>
+                <li><strong>Workshop de Marketing Digital:</strong> Dia 25, às 19h no auditório.</li>
+                <li><strong>Almoço de Networking:</strong> Primeiro sábado do próximo mês.</li>
+            </ul>
+        </section>
+
+        <section class="cartao-inicio clima">
+            <h3>Clima Atual</h3>
+            <div id="climaAtual">
+                <p>Carregando dados meteorológicos...</p>
+            </div>
+        </section>
+
+        <section class="cartao-inicio previsao">
+            <h3>Previsão para 3 Dias</h3>
+            <div id="previsaoTempo">
+                <p>Carregando previsão...</p>
+            </div>
+        </section>
+
+        <section class="destaques-container">
+            <h3>Empresas em Destaque</h3>
+            <div id="conteinerDestaques" class="view-grade"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="info-footer">
+            <h3>Câmara de Comércio de Timbuktu</h3>
+            <p>Rua XV de Novembro, 500 - Centro</p>
+            <p>Curitiba, PR - CEP 80020-310</p>
+            <p>contato@camaratimbuktu.org.br | (41) 3000-0000</p>
+        </div>
+        <div class="desenvolvedor-footer">
+            <p>&copy; <span id="anoAtual"></span> • Vinicius de Oliveira Collaço • WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+</body>
+</html>

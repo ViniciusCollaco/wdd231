@@ -28,4 +28,28 @@
         margin: 0;
         padding: 0;
     }
+
+    .grid-inicio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .grid-inicio .hero-container,
+    .grid-inicio .titulo-boas-vindas,
+    .grid-inicio .destaques-container {
+        grid-column: 1 / -1; 
+    }
+
+    .grid-inicio .eventos {
+        grid-column: span 1;
+    }
+
+    .grid-inicio .clima {
+        grid-column: span 1;
+    }
+
+    .grid-inicio .previsao {
+        grid-column: span 1;
+    }
 }

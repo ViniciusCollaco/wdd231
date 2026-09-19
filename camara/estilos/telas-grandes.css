@@ -1,24 +1,53 @@
 @media (min-width: 768px) {
-    .header-container {
+    header {
+        width: 100%;
+        background-color: #0f2942;
+        display: flex;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: nowrap; 
+        max-width: auto;
+        margin: 0 auto;
+        padding: 1rem 1rem; 
+        box-sizing: border-box;
+    }
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    .logo-e-titulo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .titulo-header h1 {
         font-size: 1.4rem;
         white-space: nowrap;
+        margin: 0;
+    }
+
+    .titulo-header p {
+        margin: 0;
     }
 
     #btnMenu {
-        display: none !important; 
+        display: none !important;
     }
 
     #navMenu {
         display: block !important;
-        width: auto; 
-        margin-left: auto; 
+        width: auto;
+        margin-top: 0;
+        border-top: none;
     }
 
     #navMenu ul {

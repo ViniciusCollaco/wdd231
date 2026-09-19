@@ -4,11 +4,13 @@ document.querySelector('#ultimaModificacao').textContent = `Última Modificaçã
 const btnMenu = document.querySelector('#btnMenu');
 const navMenu = document.querySelector('#navMenu');
 
-btnMenu.addEventListener('click', () => {
-    const estaAberto = navMenu.classList.toggle('open');
-    btnMenu.classList.toggle('open');
-    btnMenu.setAttribute('aria-expanded', estaAberto);
-});
+if (btnMenu && navMenu) {
+    btnMenu.addEventListener('click', () => {
+        const estaAberto = navMenu.classList.toggle('open');
+        btnMenu.setAttribute('aria-expanded', estaAberto);
+        btnMenu.innerHTML = estaAberto ? '&times;' : '&#9776;';
+    });
+}
 
 const conteiner = document.querySelector('#conteinerMembros');
 const btnGrade = document.querySelector('#btnGrade');

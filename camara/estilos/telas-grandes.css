@@ -75,4 +75,10 @@
     .grid-inicio .previsao {
         grid-column: span 1;
     }
+    .container-associacao {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
 }

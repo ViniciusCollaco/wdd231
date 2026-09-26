@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretório de Membros - Câmara de Comércio de Timbuktu</title>
-    <meta name="description" content="Diretório de empresas associadas à Câmara de Comércio de Timbuktu. Encontre parceiros comerciais e serviços locais.">
+    <title>Agradecimento - Câmara de Comércio de Timbuktu</title>
+    <meta name="description" content="Confirmação de envio de formulário de associação.">
     <meta name="author" content="Vinicius de Oliveira Collaço">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Diretório de Membros - Câmara de Comércio de Timbuktu">
-    <meta property="og:description" content="Conheça e conecte-se com as empresas associadas à Câmara de Comércio de Timbuktu.">
-    <meta property="og:image" content="https://viniciuscollaco.github.io/wdd231/camara/imagens/og-image.webp">
-    <meta property="og:url" content="https://viniciuscollaco.github.io/wdd231/camara/diretorio.html">
-
     <link rel="icon" href="imagens/titulo-logo.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/telas-pequenas.css">
     <link rel="stylesheet" href="estilos/telas-grandes.css" media="(min-width: 768px)">
 
-    <script src="scripts/diretorio.js" defer></script>
+    <script src="scripts/inicio.js" defer></script>
+    <script src="scripts/agradecimento.js" defer></script>
 </head>
 <body>
     <header>
@@ -41,22 +36,25 @@
         <nav id="navMenu">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="diretorio.html" class="active">Diretório</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
                 <li><a href="associacao.html">Associe-se</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
             </ul>
         </nav>
-    </header>
+    </header>   
 
-    <main>
-        <h2>Diretório de Membros</h2>
-        
-        <div class="controles-view">
-            <button id="btnGrade" class="active" aria-label="Exibir em Grade">Grid ▦</button>
-            <button id="btnLista" aria-label="Exibir em Lista">Lista ☰</button>
+    <main class="confirmacao-container">
+        <h2>Obrigado pelo seu Pedido de Associação!</h2>
+        <p>Recebemos suas informações e entraremos em contato em breve.</p>
+
+        <div class="detalhes-resumo">
+            <h3>Resumo das Informações Enviadas:</h3>
+            <p><strong>Nome:</strong> <span id="resumo-nome"></span> <span id="resumo-sobrenome"></span></p>
+            <p><strong>E-mail:</strong> <span id="resumo-email"></span></p>
+            <p><strong>Celular:</strong> <span id="resumo-celular"></span></p>
+            <p><strong>Organização:</strong> <span id="resumo-organizacao"></span></p>
+            <p><strong>Data de Envio:</strong> <span id="resumo-dataHora"></span></p>
         </div>
-
-        <div id="conteinerMembros" class="view-grade"></div>
     </main>
 
     <footer>

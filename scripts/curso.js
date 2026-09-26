@@ -64,19 +64,60 @@ const courses = [
 const containerCursos = document.querySelector('#container-cursos');
 const valorCreditos = document.querySelector('#valor-creditos');
 
+const infosDoCurso = document.querySelector('#infos-do-curso');
+
 function renderizarCursos(listaCursos) {
     containerCursos.innerHTML = '';
     
     listaCursos.forEach(curso => {
         const card = document.createElement('div');
         card.className = `curso-card ${curso.completed ? 'completed' : 'pending'}`;
-        card.textContent = `${curso.subject} ${curso.number}`;
+        card.textContent = `${curso.subject}${curso.number}`;
+        
+        card.style.cursor = 'pointer';
+
+        card.addEventListener('click', () => {
+            exibirInfosDoCurso(curso);
+        });
+
         containerCursos.appendChild(card);
     });
 
-    // Cálculo dinâmico do número total de créditos usando reduce()
     const total = listaCursos.reduce((acc, curso) => acc + curso.credits, 0);
     valorCreditos.textContent = total;
+}
+
+function exibirInfosDoCurso(curso) {
+    infosDoCurso.innerHTML = '';
+    infosDoCurso.innerHTML = `
+        <button id="fecharModal">❌</button>
+        <h2>${curso.subject}${curso.number}</h2>
+        <h3>${curso.title}</h3>
+        <p><strong>Créditos</strong>: ${curso.credits}</p>
+        <p><strong>Certificado</strong>: ${curso.certificate}</p>
+        <p>${curso.description}</p>
+        <p><strong>Tecnologias</strong>: ${curso.technology.join(', ')}</p>
+    `;
+    
+    infosDoCurso.showModal();
+
+    const fecharModal = document.querySelector("#fecharModal");
+    fecharModal.addEventListener("click", () => {
+        infosDoCurso.close();
+    });
+
+    infosDoCurso.addEventListener("click", (event) => {
+        const rect = infosDoCurso.getBoundingClientRect();
+        const clicouFora = (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        );
+        if (clicouFora) {
+            infosDoCurso.close();
+        }
+    });
 }
 
 document.querySelector('#btn-todos').addEventListener('click', (e) => {
@@ -99,5 +140,4 @@ function atualizarBotaoAtivo(botaoClicado) {
     botaoClicado.classList.add('active');
 }
 
-// Renderização inicial com todos os cursos
 renderizarCursos(courses);

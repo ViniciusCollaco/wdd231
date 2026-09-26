@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação - Câmara de Comércio de Timbuktu</title>
+    <meta name="description" content="Página de associação da Câmara de Comércio de Timbuktu. Formulário de cadastro.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagens/titulo-logo.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/telas-pequenas.css">
+    <link rel="stylesheet" href="estilos/telas-grandes.css" media="(min-width: 768px)">
+
+    <script src="scripts/inicio.js" defer></script>
+    <script src="scripts/associacao.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-e-titulo">
+                <img src="imagens/logo-principal.webp" alt="Logo Câmara de Comércio de Timbuktu" class="logo" width="50" height="50">
+                <div class="titulo-header">
+                    <h1>Câmara de Comércio de Timbuktu</h1>
+                    <p>Fortalecendo o comércio local</p>
+                </div>
+            </div>
+
+            <button id="btnMenu" aria-label="Abrir Menu de Navegação" aria-expanded="false">&#9776;</button>
+        </div>
+
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="diretorio.html">Diretório</a></li>
+                <li><a href="associacao.html" class="active">Associe-se</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <main class="layout-associacao">
+        <h2>Solicitação de Associação</h2>
+
+        <div class="container-associacao">
+            <form action="agradecimento.html" method="get" class="form-associacao">
+                
+                <label>
+                    <span>Nome: *</span>
+                    <input type="text" name="nome" id="nome" required autocomplete="given-name" title="Digite seu primeiro nome">
+                </label>
+
+                <label>
+                    <span>Sobrenome: *</span>
+                    <input type="text" name="sobrenome" id="sobrenome" required autocomplete="family-name" title="Digite seu sobrenome">
+                </label>
+
+                <label>
+                    <span>Cargo na Organização:</span>
+                    <input type="text" name="cargo" id="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s\-]{7,}" title="O cargo deve conter apenas letras, hífens e espaços (mínimo 7 caracteres)">
+                </label>
+
+                <label>
+                    <span>E-mail: *</span>
+                    <input type="email" name="email" id="email" required autocomplete="email" placeholder="exemplo@empresa.com" title="Digite um endereço de e-mail válido">
+                </label>
+
+                <label>
+                    <span>Celular: *</span>
+                    <input type="tel" name="celular" id="celular" required autocomplete="tel" title="Digite seu número de telefone celular">
+                </label>
+
+                <label>
+                    <span>Nome da Empresa/Organização: *</span>
+                    <input type="text" name="organizacao" id="organizacao" required autocomplete="organization" title="Digite o nome da sua empresa">
+                </label>
+
+                <fieldset class="grupo-niveis">
+                    <legend>Nível de Associação: *</legend>
+                    <label class="radio-label">
+                        <input type="radio" name="nivel" value="np" required> Associação Sem Fins Lucrativos (NP - Gratuito)
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="nivel" value="bronze"> Associação Bronze
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="nivel" value="silver"> Associação Prata
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="nivel" value="gold"> Associação Ouro
+                    </label>
+                </fieldset>
+
+                <label>
+                    <span>Descrição da Empresa/Organização:</span>
+                    <textarea name="descricao" id="descricao" rows="4" title="Descreva brevemente a sua organização"></textarea>
+                </label>
+
+                <input type="hidden" name="dataHora" id="dataHora">
+
+                <input type="submit" value="Enviar Solicitação" class="btn-submit">
+            </form>
+
+            <aside class="cartoes-niveis">
+                <h3>Níveis de Associação</h3>
+                
+                <div class="cartao-nivel animar-cartao">
+                    <h4>Associação NP</h4>
+                    <p>Ideal para ONGs e entidades sem fins lucrativos.</p>
+                    <button class="btn-modal" data-modal="modal-np">Saiba Mais</button>
+                </div>
+
+                <div class="cartao-nivel animar-cartao">
+                    <h4>Associação Bronze</h4>
+                    <p>Para pequenas empresas que buscam networking inicial.</p>
+                    <button class="btn-modal" data-modal="modal-bronze">Saiba Mais</button>
+                </div>
+
+                <div class="cartao-nivel animar-cartao">
+                    <h4>Associação Prata</h4>
+                    <p>Destaque no diretório e participação em workshops.</p>
+                    <button class="btn-modal" data-modal="modal-silver">Saiba Mais</button>
+                </div>
+
+                <div class="cartao-nivel animar-cartao">
+                    <h4>Associação Ouro</h4>
+                    <p>Máxima visibilidade, eventos VIP e publicidade em destaque.</p>
+                    <button class="btn-modal" data-modal="modal-gold">Saiba Mais</button>
+                </div>
+            </aside>
+        </div>
+
+        <dialog id="modal-np">
+            <h3>Benefícios: Associação NP</h3>
+            <p><strong>Taxa:</strong> Gratuito</p>
+            <ul>
+                <li>Listagem básica no diretório da câmara</li>
+                <li>Acesso a reuniões comunitárias</li>
+            </ul>
+            <button class="btn-fechar-modal">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <h3>Benefícios: Associação Bronze</h3>
+            <p><strong>Taxa:</strong> R$ 100,00 / mês</p>
+            <ul>
+                <li>Listagem completa no diretório</li>
+                <li>Desconto em eventos e workshops</li>
+                <li>Participação na rede de contatos</li>
+            </ul>
+            <button class="btn-fechar-modal">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <h3>Benefícios: Associação Prata</h3>
+            <p><strong>Taxa:</strong> R$ 250,00 / mês</p>
+            <ul>
+                <li>Todos os benefícios do Bronze</li>
+                <li>Destaque rotativo na página inicial</li>
+                <li>Acesso a treinamentos empresariais avançados</li>
+            </ul>
+            <button class="btn-fechar-modal">Fechar</button>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <h3>Benefícios: Associação Ouro</h3>
+            <p><strong>Taxa:</strong> R$ 500,00 / mês</p>
+            <ul>
+                <li>Todos os benefícios do Prata</li>
+                <li>Patrocínio em eventos principais da cidade</li>
+                <li>Publicidade prioritária em redes sociais e newsletters</li>
+            </ul>
+            <button class="btn-fechar-modal">Fechar</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="info-footer">
+            <h3>Câmara de Comércio de Timbuktu</h3>
+            <p>Rua XV de Novembro, 500 - Centro</p>
+            <p>Curitiba, PR - CEP 80020-310</p>
+            <p>contato@camaratimbuktu.org.br | (41) 3000-0000</p>
+        </div>
+        <div class="desenvolvedor-footer">
+            <p>&copy; <span id="anoAtual"></span> • Vinicius de Oliveira Collaço • WDD 231</p>
+            <p id="ultimaModificacao"></p>
+        </div>
+    </footer>
+</body>
+</html>

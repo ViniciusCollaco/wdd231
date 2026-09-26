@@ -283,3 +283,115 @@ footer {
     font-size: 0.9rem;
     color: #e2e8f0;
 }
+
+.form-associacao label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-associacao span {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.form-associacao input[type="text"],
+.form-associacao input[type="email"],
+.form-associacao input[type="tel"],
+.form-associacao textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.grupo-niveis {
+    border: 1px solid #cbd5e0;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.radio-label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+    background-color: #0f2942;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #2b6cb0;
+}
+
+.cartao-nivel {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.animar-cartao {
+    animation: surgimento 1.2s ease-out;
+}
+
+@keyframes surgimento {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    margin: auto;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-fechar-modal {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0f2942;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirmacao-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.detalhes-resumo {
+    margin-top: 1.5rem;
+    border-top: 2px solid #f6ad55;
+    padding-top: 1rem;
+}

@@ -4,11 +4,13 @@ document.querySelector('#ultimaModificacao').textContent = `Última Modificaçã
 const btnMenu = document.querySelector('#btnMenu');
 const navMenu = document.querySelector('#navMenu');
 
-btnMenu.addEventListener('click', () => {
-    const estaAberto = navMenu.classList.toggle('open');
-    btnMenu.setAttribute('aria-expanded', estaAberto);
-    btnMenu.innerHTML = estaAberto ? '&times;' : '&#9776;'; 
-});
+if (btnMenu && navMenu) {
+    btnMenu.addEventListener('click', () => {
+        const estaAberto = navMenu.classList.toggle('open');
+        btnMenu.setAttribute('aria-expanded', estaAberto);
+        btnMenu.innerHTML = estaAberto ? '&times;' : '&#9776;'; 
+    });
+}
 
 const API_KEY = '5b97d6443c1889684ee067ec60dd1c1b';
 const LAT = '-25.4284'; 
@@ -37,6 +39,8 @@ async function obterClima() {
 
 function exibirClimaAtual(dados) {
     const conteinerClima = document.querySelector('#climaAtual');
+    if (!conteinerClima) return;
+
     const temp = Math.round(dados.main.temp);
     const descricao = dados.weather[0].description;
     const icone = `https://openweathermap.org/img/wn/${dados.weather[0].icon}@2x.png`;
@@ -54,7 +58,8 @@ function exibirClimaAtual(dados) {
 
 function exibirPrevisao3Dias(dados) {
     const conteinerPrevisao = document.querySelector('#previsaoTempo');
-    
+    if (!conteinerPrevisao) return;
+
     const hoje = new Date().toISOString().split('T')[0];
     const listaPrevisoes = dados.list;
     const previsoesPorDia = {};
@@ -87,6 +92,8 @@ function exibirPrevisao3Dias(dados) {
 }
 
 async function carregarDestaques() {
+    if (!document.querySelector('#conteinerDestaques')) return;
+
     try {
         const resposta = await fetch('dados/membros.json');
         if (!resposta.ok) throw new Error('Erro ao ler membros.json');
@@ -109,6 +116,8 @@ async function carregarDestaques() {
 
 function exibirDestaques(membros) {
     const conteiner = document.querySelector('#conteinerDestaques');
+    if (!conteiner) return;
+
     conteiner.innerHTML = '';
 
     membros.forEach(membro => {

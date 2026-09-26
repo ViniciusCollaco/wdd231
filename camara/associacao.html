@@ -49,60 +49,60 @@
         <div class="container-associacao">
             <form action="agradecimento.html" method="get" class="form-associacao">
                 
-                <label>
+                <label for="nome">
                     <span>Nome: *</span>
                     <input type="text" name="nome" id="nome" required autocomplete="given-name" title="Digite seu primeiro nome">
                 </label>
 
-                <label>
+                <label for="sobrenome">
                     <span>Sobrenome: *</span>
                     <input type="text" name="sobrenome" id="sobrenome" required autocomplete="family-name" title="Digite seu sobrenome">
                 </label>
 
-                <label>
+                <label for="cargo">
                     <span>Cargo na Organização:</span>
                     <input type="text" name="cargo" id="cargo" autocomplete="organization-title" pattern="[A-Za-zÀ-ÿ\s\-]{7,}" title="O cargo deve conter apenas letras, hífens e espaços (mínimo 7 caracteres)">
                 </label>
 
-                <label>
+                <label for="email">
                     <span>E-mail: *</span>
                     <input type="email" name="email" id="email" required autocomplete="email" placeholder="exemplo@empresa.com" title="Digite um endereço de e-mail válido">
                 </label>
 
-                <label>
+                <label for="celular">
                     <span>Celular: *</span>
                     <input type="tel" name="celular" id="celular" required autocomplete="tel" title="Digite seu número de telefone celular">
                 </label>
 
-                <label>
+                <label for="organizacao">
                     <span>Nome da Empresa/Organização: *</span>
                     <input type="text" name="organizacao" id="organizacao" required autocomplete="organization" title="Digite o nome da sua empresa">
                 </label>
 
                 <fieldset class="grupo-niveis">
                     <legend>Nível de Associação: *</legend>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="np" required> Associação Sem Fins Lucrativos (NP - Gratuito)
+                    <label for="nivel-np" class="radio-label">
+                        <input type="radio" name="nivel" id="nivel-np" value="np" required> Associação Sem Fins Lucrativos (NP - Gratuito)
                     </label>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="bronze"> Associação Bronze
+                    <label for="nivel-bronze" class="radio-label">
+                        <input type="radio" name="nivel" id="nivel-bronze" value="bronze"> Associação Bronze
                     </label>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="silver"> Associação Prata
+                    <label for="nivel-silver" class="radio-label">
+                        <input type="radio" name="nivel" id="nivel-silver" value="silver"> Associação Prata
                     </label>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="gold"> Associação Ouro
+                    <label for="nivel-gold" class="radio-label">
+                        <input type="radio" name="nivel" id="nivel-gold" value="gold"> Associação Ouro
                     </label>
                 </fieldset>
 
-                <label>
+                <label for="descricao">
                     <span>Descrição da Empresa/Organização:</span>
                     <textarea name="descricao" id="descricao" rows="4" title="Descreva brevemente a sua organização"></textarea>
                 </label>
 
                 <input type="hidden" name="dataHora" id="dataHora">
 
-                <input type="submit" value="Enviar Solicitação" class="btn-submit">
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
             </form>
 
             <aside class="cartoes-niveis">

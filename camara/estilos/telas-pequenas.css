@@ -395,3 +395,24 @@ dialog::backdrop {
     border-top: 2px solid #f6ad55;
     padding-top: 1rem;
 }
+
+.controles-view button,
+#btnGrade,
+#btnLista,
+.btn-modal {
+    background-color: transparent !important;
+    border: none !important;
+    color: #0f2942 !important;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    outline: none;
+}
+
+.controles-view button:hover,
+#btnGrade:hover,
+#btnLista:hover,
+.btn-modal:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,89 @@
+/* Configuração básica da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1rem;
+    background-color: #f4f4f9;
+}
+
+/* ========================================================
+   PARTE 1: Animação Contínua (Carregador com ID)
+   ======================================================== */
+#carregador {
+    position: relative; /* Necessário para alinhar o pseudo-elemento ::after ao centro */
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent; /* 2 lados cinzas, 2 transparentes */
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite; /* Animação contínua e infinita */
+    box-shadow: 0 0 1rem rgba(0, 0, 255, 0.4);
+}
+
+#carregador::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s ease-in-out infinite; /* Pulsação contínua */
+}
+
+/* Keyframes da Rotação */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyframes do Efeito Pulsar */
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+/* ========================================================
+   PARTE 2: Transição Interativa no Hover (Carregador com Classe)
+   ======================================================== */
+.carregador-t {
+    position: relative;
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(0, 0, 255, 0.4);
+    /* Corrigido: Para transição de propriedades CSS genéricas (como rotação), 
+        usamos a propriedade 'transform' com a duração e curva de aceleração */
+    transition: transform 1.5s linear; 
+}
+
+.carregador-t::after {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Inicia invisível e oculto (scale 0) */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.5s ease-in-out;
+    font-size: 2rem;
+}
+
+/* Estado de Hover (passar o mouse por cima) */
+.carregador-t:hover {
+    transform: rotate(360deg); /* Gira 360 graus na transição */
+}
+
+.carregador-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.5); /* Aumenta de tamanho no hover */
+}

@@ -427,3 +427,92 @@ dialog ul {
 dialog li {
     margin-bottom: 0.4rem;
 }
+
+/* Mensagem de visitas no topo da página */
+.mensagem-visita {
+    background-color: #e2e8f0;
+    color: #0f2942;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #d69e2e;
+}
+
+.secao-demografia {
+    margin-bottom: 2rem;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+}
+
+.grid-galeria {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "area1"
+        "area2"
+        "area3"
+        "area4"
+        "area5"
+        "area6"
+        "area7"
+        "area8";
+}
+
+.cartao-interesse {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartao-interesse h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cartao-interesse figure {
+    margin: 0 0 0.75rem 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.cartao-interesse img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.cartao-interesse address {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.cartao-interesse p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.btn-saiba-mais {
+    background-color: #0f2942;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: start;
+    font-weight: bold;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #2b6cb0;
+}

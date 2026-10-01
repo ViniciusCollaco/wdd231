@@ -82,3 +82,38 @@
         align-items: start;
     }
 }
+/* --- TELAS MÉDIAS (641px até 1024px) --- */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-galeria {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "area1 area2"
+            "area3 area4"
+            "area5 area6"
+            "area7 area8";
+    }
+}
+
+/* --- TELAS GRANDES (1025px em diante) --- */
+@media (min-width: 1025px) {
+    .grid-galeria {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "area1 area2 area3 area4"
+            "area5 area6 area7 area8";
+    }
+
+    /* Efeito de destaque ao passar o mouse na imagem (SÓ EM DESKTOP) */
+    .cartao-interesse figure img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .cartao-interesse figure img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}

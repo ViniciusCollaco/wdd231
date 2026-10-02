@@ -400,7 +400,6 @@ dialog::backdrop {
     padding-top: 1rem;
 }
 
-/* Ajuste de Contraste e Estilo para Botões Modais e Controles */
 .controles-view button,
 #btnGrade,
 #btnLista {

@@ -445,3 +445,94 @@ dialog li {
     margin-bottom: 0.4rem;
 }
 
+.mensagem-visita {
+    background-color: #ebf8ff;
+    border-left: 4px solid #2b6cb0;
+    color: #2b6cb0;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.grade-pontos {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8";
+}
+
+.cartao-ponto.item1 { grid-area: item1; }
+.cartao-ponto.item2 { grid-area: item2; }
+.cartao-ponto.item3 { grid-area: item3; }
+.cartao-ponto.item4 { grid-area: item4; }
+.cartao-ponto.item5 { grid-area: item5; }
+.cartao-ponto.item6 { grid-area: item6; }
+.cartao-ponto.item7 { grid-area: item7; }
+.cartao-ponto.item8 { grid-area: item8; }
+
+.cartao-ponto {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cartao-ponto h2 {
+    font-size: 1.25rem;
+    color: #0f2942;
+    margin-bottom: 0;
+}
+
+.cartao-ponto figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.cartao-ponto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.cartao-ponto address {
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+.cartao-ponto p {
+    font-size: 0.95rem;
+    color: #2d3748;
+    flex-grow: 1;
+}
+
+.btn-saiba-mais {
+    background-color: #0f2942;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: start;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #2b6cb0;
+}

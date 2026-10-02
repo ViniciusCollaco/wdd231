@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const campoDataHora = document.querySelector('#dataHora');
     if (campoDataHora) {
-        campoDataHora.value = new Date().toLocaleString('pt-BR');
+        campoDataHora.value = new Date().toISOString();
     }
 
     const botoesAbrir = document.querySelectorAll('.btn-modal');

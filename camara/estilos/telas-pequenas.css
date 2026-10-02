@@ -396,25 +396,39 @@ dialog::backdrop {
     padding-top: 1rem;
 }
 
+/* Ajuste de Contraste e Estilo para Botões Modais e Controles */
 .controles-view button,
 #btnGrade,
-#btnLista,
-.btn-modal {
-    background-color: transparent !important;
-    border: none !important;
-    color: #0f2942 !important;
+#btnLista {
+    background-color: transparent;
+    border: none;
+    color: #0f2942;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     padding: 0.4rem 0.8rem;
-    outline: none;
 }
 
 .controles-view button:hover,
 #btnGrade:hover,
-#btnLista:hover,
-.btn-modal:hover {
+#btnLista:hover {
     opacity: 0.7;
+}
+
+.btn-modal {
+    background-color: #0f2942;
+    color: #ffffff !important;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.btn-modal:hover {
+    background-color: #2b6cb0;
 }
 
 dialog ul {

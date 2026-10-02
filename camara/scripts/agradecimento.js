@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
 
-    const campos = ['nome', 'sobrenome', 'email', 'celular', 'organizacao', 'dataHora'];
+    const campos = ['nome', 'sobrenome', 'email', 'celular', 'organizacao', 'membershipLevel', 'dataHora'];
 
     campos.forEach(campo => {
         const valor = urlParams.get(campo);

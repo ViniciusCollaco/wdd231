@@ -335,6 +335,10 @@ footer {
     background-color: #2b6cb0;
 }
 
+.form-associacao {
+    margin-bottom: 2rem;
+}
+
 .cartao-nivel {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;

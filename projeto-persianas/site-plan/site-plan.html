@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento do Site - A.M. Cortinas e Persianas</title>
+    <meta name="description" content="Documento de planejamento do site da empresa A.M. Cortinas e Persianas para a disciplina WDD231.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="site-plan.css">
+</head>
+<body>
+    <header>
+        <h1>Plano do Site: A.M. Cortinas e Persianas</h1>
+        <p class="subtitulo">Documento de Planejamento e Arquitetura do Projeto Web</p>
+    </header>
+
+    <main>
+        <section class="secao-plano">
+            <h2>1. Nome do Site</h2>
+            <p><strong>Nome Escolhido:</strong> A.M. Cortinas e Persianas</p>
+            <p><strong>Justificativa:</strong> O nome identifica diretamente a empresa familiar especializada em vendas, reforma e instalação de persianas sob medida. Ele constrói autoridade de marca local e facilita a memorização por parte dos clientes da região.</p>
+            <p><strong>Sugestão de Domínio:</strong> <code>amcortinasepersianas.com.br</code></p>
+        </section>
+
+        <section class="secao-plano">
+            <h2>2. Finalidade do Site</h2>
+            <p>O site tem como objetivo modernizar a presença digital da empresa, oferecendo uma vitrine virtual interativa com catálogo dinâmico de mais de 15 modelos de persianas (Rolo, Romana, Vertical e Horizontal). A plataforma facilitará a captação de clientes locais através de um formulário interativo para solicitação de orçamentos sob medida, fornecendo também informações completas sobre serviços de instalação e manutenção.</p>
+        </section>
+
+        <section class="secao-plano">
+            <h2>3. Cenários (Perguntas dos Usuários)</h2>
+            <div class="cenarios-grid">
+                <article class="cartao-cenario">
+                    <h3>Cenário 1</h3>
+                    <p class="pergunta-cenario">"Preciso escurecer completamente o meu quarto para dormir melhor. Quais modelos de persiana blackout combinam com uma decoração moderna e como solicito uma medição no meu endereço?"</p>
+                </article>
+
+                <article class="cartao-cenario">
+                    <h3>Cenário 2</h3>
+                    <p class="pergunta-cenario">"Já possuo uma persiana em minha sala que precisa de conserto e limpeza. A empresa realiza manutenção de persianas antigas ou apenas vende modelos novos?"</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="secao-plano">
+            <h2>4. Esquema de Cores</h2>
+            <p>As cores escolhidas transmitem elegância, sofisticação e profissionalismo, reforçando o nicho de decoração e arquitetura de interiores.</p>
+            
+            <div class="paleta-cores">
+                <div class="amostra-cor cor-primaria">
+                    <span class="nome-cor">Azul Escuro Nobre</span>
+                    <span class="hex-cor">#0F2942</span>
+                    <span class="uso-cor">Usado em cabeçalhos, rodapés, títulos principais e elementos de destaque.</span>
+                </div>
+
+                <div class="amostra-cor cor-secundaria">
+                    <span class="nome-cor">Dourado / Âmbar</span>
+                    <span class="hex-cor">#D69E2E</span>
+                    <span class="uso-cor">Usado em botões de ação (Call to Action), bordas decorativas e acentos.</span>
+                </div>
+
+                <div class="amostra-cor cor-fundo">
+                    <span class="nome-cor">Cinza Claro Neutro</span>
+                    <span class="hex-cor">#F7FAFC</span>
+                    <span class="uso-cor">Usado no fundo geral das páginas para garantir leitura limpa e alto contraste.</span>
+                </div>
+
+                <div class="amostra-cor cor-texto">
+                    <span class="nome-cor">Grafite Escuro</span>
+                    <span class="hex-cor">#1A202C</span>
+                    <span class="uso-cor">Usado no corpo de texto e parágrafos para legibilidade máxima (WCAG).</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-plano">
+            <h2>5. Tipografia</h2>
+            <p>A combinação tipográfica utiliza duas fontes legíveis do Google Fonts que equilibram modernidade e clareza:</p>
+
+            <div class="demonstracao-tipografia">
+                <div class="box-fonte fonte-titulo">
+                    <h3>Montserrat (Semibold / Bold)</h3>
+                    <p class="exemplo-fonte">Aplicada em todos os Títulos (H1, H2, H3), menus de navegação e botões.</p>
+                </div>
+
+                <div class="box-fonte fonte-corpo">
+                    <h3>Open Sans (Regular / Semibold)</h3>
+                    <p class="exemplo-fonte">Aplicada no Corpo do Texto, parágrafos, listas, rótulos de formulários e descrições do catálogo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-plano">
+            <h2>6. Wireframes da Página Inicial (index.html)</h2>
+            <p>Os wireframes a seguir delineiam a estrutura responsiva planejada para dispositivos móveis e telas grandes (desktop).</p>
+
+            <div class="wireframes-container">
+                <article class="wireframe-box">
+                    <h3>Visualização Mobile (Telas Pequenas)</h3>
+                    <svg class="svg-wireframe mobile" viewBox="0 0 320 620" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="300" height="40" fill="#0F2942" rx="4"/>
+                        <text x="25" y="34" fill="#FFFFFF" font-family="Montserrat" font-size="12" font-weight="bold">A.M. Cortinas</text>
+                        <rect x="270" y="20" width="25" height="20" fill="#D69E2E" rx="3"/>
+                        <text x="277" y="34" fill="#0F2942" font-size="12" font-weight="bold">☰</text>
+
+                        <rect x="10" y="60" width="300" height="120" fill="#E2E8F0" stroke="#CBD5E0" rx="4"/>
+                        <text x="110" y="115" fill="#4A5568" font-family="Montserrat" font-size="12">[ Banner Hero ]</text>
+
+                        <rect x="75" y="140" width="170" height="28" fill="#D69E2E" rx="4"/>
+                        <text x="95" y="158" fill="#0F2942" font-family="Montserrat" font-size="11" font-weight="bold">Solicitar Orçamento</text>
+
+                        <rect x="10" y="195" width="300" height="25" fill="#0F2942" rx="3"/>
+                        <text x="90" y="212" fill="#FFFFFF" font-family="Montserrat" font-size="11">Modelos em Destaque</text>
+
+                        <rect x="10" y="230" width="300" height="90" fill="#FFFFFF" stroke="#CBD5E0" rx="4"/>
+                        <rect x="20" y="240" width="70" height="70" fill="#E2E8F0" rx="3"/>
+                        <text x="105" y="260" fill="#0F2942" font-family="Montserrat" font-size="11" font-weight="bold">Persiana Rolo Blackout</text>
+                        <text x="105" y="280" fill="#718096" font-family="Open Sans" font-size="9">ideal para quartos e salas</text>
+
+                        <rect x="10" y="330" width="300" height="90" fill="#FFFFFF" stroke="#CBD5E0" rx="4"/>
+                        <rect x="20" y="340" width="70" height="70" fill="#E2E8F0" rx="3"/>
+                        <text x="105" y="360" fill="#0F2942" font-family="Montserrat" font-size="11" font-weight="bold">Persiana Romana</text>
+                        <text x="105" y="380" fill="#718096" font-family="Open Sans" font-size="9">Elegância e acabamento nobre</text>
+
+                        <rect x="10" y="430" width="300" height="80" fill="#E2E8F0" rx="4"/>
+                        <text x="95" y="475" fill="#4A5568" font-family="Montserrat" font-size="11">[ Depoimentos de Clientes ]</text>
+
+                        <rect x="10" y="520" width="300" height="90" fill="#0F2942" rx="4"/>
+                        <text x="100" y="565" fill="#FFFFFF" font-family="Open Sans" font-size="10">© 2026 A.M. Cortinas</text>
+                    </svg>
+                </article>
+
+                <article class="wireframe-box">
+                    <h3>Visualização Desktop (Telas Grandes)</h3>
+                    <svg class="svg-wireframe desktop" viewBox="0 0 600 520" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="580" height="45" fill="#0F2942" rx="4"/>
+                        <text x="25" y="37" fill="#FFFFFF" font-family="Montserrat" font-size="14" font-weight="bold">A.M. Cortinas e Persianas</text>
+                        <text x="320" y="37" fill="#FFFFFF" font-family="Montserrat" font-size="11">Início   Catálogo   Orçamento</text>
+
+                        <rect x="10" y="65" width="580" height="150" fill="#E2E8F0" stroke="#CBD5E0" rx="4"/>
+                        <text x="230" y="130" fill="#4A5568" font-family="Montserrat" font-size="14">[ Banner Hero Widescreen ]</text>
+                        <rect x="220" y="160" width="160" height="35" fill="#D69E2E" rx="4"/>
+                        <text x="238" y="182" fill="#0F2942" font-family="Montserrat" font-size="11" font-weight="bold">Solicitar Orçamento Online</text>
+
+                        <rect x="10" y="230" width="580" height="25" fill="#0F2942" rx="3"/>
+                        <text x="225" y="247" fill="#FFFFFF" font-family="Montserrat" font-size="12">Persianas em Destaque no Catálogo</text>
+
+                        <rect x="10" y="265" width="180" height="130" fill="#FFFFFF" stroke="#CBD5E0" rx="4"/>
+                        <rect x="20" y="275" width="160" height="60" fill="#E2E8F0" rx="3"/>
+                        <text x="25" y="350" fill="#0F2942" font-family="Montserrat" font-size="10" font-weight="bold">Persiana Rolo Blackout</text>
+
+                        <rect x="210" y="265" width="180" height="130" fill="#FFFFFF" stroke="#CBD5E0" rx="4"/>
+                        <rect x="220" y="275" width="160" height="60" fill="#E2E8F0" rx="3"/>
+                        <text x="225" y="350" fill="#0F2942" font-family="Montserrat" font-size="10" font-weight="bold">Persiana Romana</text>
+
+                        <rect x="410" y="265" width="180" height="130" fill="#FFFFFF" stroke="#CBD5E0" rx="4"/>
+                        <rect x="420" y="275" width="160" height="60" fill="#E2E8F0" rx="3"/>
+                        <text x="425" y="350" fill="#0F2942" font-family="Montserrat" font-size="10" font-weight="bold">Persiana Horizontal</text>
+
+                        <rect x="10" y="410" width="580" height="90" fill="#0F2942" rx="4"/>
+                        <text x="180" y="455" fill="#FFFFFF" font-family="Open Sans" font-size="11">© 2026 A.M. Cortinas e Persianas • Todos os direitos reservados</text>
+                    </svg>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 • Vinicius de Oliveira Collaço • Documento de Planejamento WDD 231</p>
+    </footer>
+</body>
+</html>

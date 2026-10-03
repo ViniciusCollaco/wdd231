@@ -38,8 +38,6 @@ function renderizarPontosInteresse() {
     const containerGrade = document.querySelector('.grade-pontos');
     if (!containerGrade) return;
 
-    containerGrade.innerHTML = '';
-
     lugaresInteresse.forEach(item => {
         const cartao = document.createElement('article');
         cartao.classList.add('cartao-ponto', item.id);

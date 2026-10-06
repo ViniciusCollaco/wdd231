@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento | A.M. Cortinas e Persianas</title>
+    <meta name="description" content="Solicite um orçamento sob medida ou agende uma visita técnica para instalação e reforma de persianas em Curitiba.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+
+    <meta property="og:title" content="Orçamento de Persianas Sob Medida">
+    <meta property="og:description" content="Preencha o formulário e receba uma cotação personalizada rapidamente.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/orcamento.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <a href="index.html" class="logo-link">
+            <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
+        </a>
+        <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+        <nav id="nav-menu">
+            <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="orcamento.html" class="ativo">Orçamento</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="formulario-secao">
+        <h1>Solicitação de Orçamento</h1>
+        <p>Preencha os campos abaixo para receber a cotação do seu projeto sem compromisso.</p>
+
+        <form action="obrigado.html" method="get" class="form-orcamento">
+            <div class="campo-grupo">
+            <label for="nome">Nome Completo: *</label>
+            <input type="text" id="nome" name="nome" required placeholder="Ex: João da Silva">
+            </div>
+
+            <div class="campo-grupo">
+            <label for="email">E-mail de Contato: *</label>
+            <input type="email" id="email" name="email" required placeholder="Ex: joao@email.com">
+            </div>
+
+            <div class="campo-grupo">
+            <label for="telefone">Telefone / WhatsApp: *</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="Ex: (41) 99999-9999">
+            </div>
+
+            <div class="campo-grupo">
+            <label for="servico">Serviço Desejado: *</label>
+            <select id="servico" name="servico" required>
+                <option value="">Selecione uma opção...</option>
+                <option value="Instalação de Persiana Nova">Instalação de Persiana Nova</option>
+                <option value="Manutenção / Conserto">Manutenção / Conserto de Persiana Existente</option>
+                <option value="Higienização / Lavagem">Higienização e Lavagem Especializada</option>
+                <option value="Visita Técnica para Medição">Visita Técnica para Medição no Local</option>
+            </select>
+            </div>
+
+            <div class="campo-grupo">
+            <label for="mensagem">Detalhes do Projeto / Medidas Aproximadas:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Informe a quantidade de janelas, ambiente e medidas se souber..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Solicitação</button>
+        </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 A.M. Cortinas e Persianas • Desenvolvido por Vinicius de Oliveira Collaço</p>
+        <p><a href="atribuicoes.html">Atribuições de Recursos</a> | <a href="https://youtu.be/SEU_VIDEO_AQUI" target="_blank" rel="noopener">Vídeo de Demonstração WDD231</a></p>
+    </footer>
+
+    <script type="module" src="estilos/orcamento.js"></script>
+</body>
+</html>

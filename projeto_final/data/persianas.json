@@ -1,0 +1,152 @@
+[
+    {
+        "id": "p01",
+        "nome": "Persiana Rolo Blackout Premium",
+        "categoria": "Rolo",
+        "material": "Poliéster com camada emborrachada",
+        "bloqueioLuz": "100%",
+        "avaliacao": 4.9,
+        "imagem": "imagens/persiana-rolo-blackout.webp",
+        "descricao": "Ideal para quartos e salas de TV. Garante escurecimento total e isolamento térmico eficiente."
+    },
+    {
+        "id": "p02",
+        "nome": "Persiana Romana Tela Solar 3%",
+        "categoria": "Romana",
+        "material": "Fibra de vidro e PVC",
+        "bloqueioLuz": "97%",
+        "avaliacao": 4.8,
+        "imagem": "imagens/persiana-romana-solar.webp",
+        "descricao": "Elegância dobrável que reduz a entrada de calor e raios UV mantendo a visibilidade externa."
+    },
+    {
+        "id": "p03",
+        "nome": "Persiana Horizontal de Alumínio 25mm",
+        "categoria": "Horizontal",
+        "material": "Alumínio Anodizado",
+        "bloqueioLuz": "Regulável",
+        "avaliacao": 4.6,
+        "imagem": "imagens/persiana-horizontal-aluminio.webp",
+        "descricao": "Clássica e resistente à umidade, perfeita para cozinhas, banheiros e escritórios."
+    },
+    {
+        "id": "p04",
+        "nome": "Persiana Vertical de Tecido Sheer",
+        "categoria": "Vertical",
+        "material": "Tecido Poliéster Translúcido",
+        "bloqueioLuz": "Filtragem Suave",
+        "avaliacao": 4.7,
+        "imagem": "imagens/persiana-vertical-tecido.webp",
+        "descricao": "Excelente para grandes vãos, portas de sacada e janelas amplas com controle de iluminação."
+    },
+    {
+        "id": "p05",
+        "nome": "Persiana Rolo Double Vision",
+        "categoria": "Rolo",
+        "material": "Poliéster em faixas alternadas",
+        "bloqueioLuz": "Ajustável (50% a 90%)",
+        "avaliacao": 4.9,
+        "imagem": "imagens/persiana-double-vision.webp",
+        "descricao": "Moderna e dinâmica, alterna faixas opacas e transparentes para ajuste contínuo de privacidade."
+    },
+    {
+        "id": "p06",
+        "nome": "Persiana Wood / Madeira Sintética 50mm",
+        "categoria": "Horizontal",
+        "material": "PVC Sintético Amadeirado",
+        "bloqueioLuz": "Regulável / Fechamento Alto",
+        "avaliacao": 4.8,
+        "imagem": "imagens/persiana-madeira.webp",
+        "descricao": "Visual nobre de madeira natural com alta durabilidade e facilidade de limpeza."
+    },
+    {
+        "id": "p07",
+        "nome": "Persiana Rolo Tela Solar 1%",
+        "categoria": "Rolo",
+        "material": "Fibra de Vidro Revestida",
+        "bloqueioLuz": "99%",
+        "avaliacao": 4.7,
+        "imagem": "imagens/persiana-rolo-solar1.webp",
+        "descricao": "Projeta privacidade máxima contra visão externa sem perder totalmente a passagem de luz."
+    },
+    {
+        "id": "p08",
+        "nome": "Persiana Romana Blackout Linho",
+        "categoria": "Romana",
+        "material": "Tecido Texturizado Linho",
+        "bloqueioLuz": "100%",
+        "avaliacao": 4.9,
+        "imagem": "imagens/persiana-romana-linho.webp",
+        "descricao": "Combina a estética acolhedora do linho com o bloqueio total da luz solar."
+    },
+    {
+        "id": "p09",
+        "nome": "Persiana Painel Europa para Sacadas",
+        "categoria": "Painel",
+        "material": "Tecido Screening Rígido",
+        "bloqueioLuz": "Variável por painéis",
+        "avaliacao": 4.5,
+        "imagem": "imagens/persiana-painel.webp",
+        "descricao": "Painéis deslizantes sobre trilhos de alumínio, indicados para divisórias de ambientes e portas de correr."
+    },
+    {
+        "id": "p10",
+        "nome": "Persiana Horizontal Bambu Ecológico",
+        "categoria": "Horizontal",
+        "material": "Bambu Natural Tratado",
+        "bloqueioLuz": "Filtragem Natural",
+        "avaliacao": 4.8,
+        "imagem": "imagens/persiana-bambu.webp",
+        "descricao": "Design sustentável e rústico que adiciona calor e textura natural aos cômodos."
+    },
+    {
+        "id": "p11",
+        "nome": "Persiana Rolo Motorizada Smart",
+        "categoria": "Rolo",
+        "material": "Tecido Técnico Soltis",
+        "bloqueioLuz": "Ajuste via App/Voz",
+        "avaliacao": 5.0,
+        "imagem": "imagens/persiana-rolo-motorizada.webp",
+        "descricao": "Automação residencial completa compatível com assistentes virtuais e controle remoto."
+    },
+    {
+        "id": "p12",
+        "nome": "Persiana Plissada Reta",
+        "categoria": "Plissada",
+        "material": "Poliéster Plissado Termofixado",
+        "bloqueioLuz": "Translúcido",
+        "avaliacao": 4.6,
+        "imagem": "imagens/persiana-plissada.webp",
+        "descricao": "Estrutura sanfonada leve que ocupa espaço mínimo quando recolhida na parte superior."
+    },
+    {
+        "id": "p13",
+        "nome": "Persiana Celular Honeycomb Thermal",
+        "categoria": "Celular",
+        "material": "Células de ar em TNT especial",
+        "bloqueioLuz": "Blackout Térmico",
+        "avaliacao": 4.9,
+        "imagem": "imagens/persiana-celular.webp",
+        "descricao": "Estrutura em colmeia de ar que retém o calor no inverno e mantém o ambiente fresco no verão."
+    },
+    {
+        "id": "p14",
+        "nome": "Persiana Vertical PVC Antichamas",
+        "categoria": "Vertical",
+        "material": "Lâminas de PVC Rigilizado",
+        "bloqueioLuz": "100% por lâmina",
+        "avaliacao": 4.4,
+        "imagem": "imagens/persiana-vertical-pvc.webp",
+        "descricao": "Fácil higienização e higiênica, recomendada para consultórios, clínicas e escritórios comerciais."
+    },
+    {
+        "id": "p15",
+        "nome": "Persiana Rolo Transparente Cristal",
+        "categoria": "Rolo",
+        "material": "PVC Cristal Transparente 0.6mm",
+        "bloqueioLuz": "0% (Proteção Vento/Chuva)",
+        "avaliacao": 4.7,
+        "imagem": "imagens/persiana-rolo-cristal.webp",
+        "descricao": "Proteção perfeita contra vento e chuva para varandas gourmet e áreas externas abertas."
+    }
+]

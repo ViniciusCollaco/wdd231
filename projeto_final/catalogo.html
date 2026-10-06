@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Completo de Persianas | A.M. Cortinas e Persianas</title>
+    <meta name="description" content="Explore nosso catálogo com mais de 15 modelos de persianas Rolo, Romana, Horizontal, Vertical e mais.">
+    <meta name="author" content="Vinicius de Oliveira Collaço">
+
+    <meta property="og:title" content="Catálogo de Persianas Sob Medida">
+    <meta property="og:description" content="Confira nossos modelos com fotos, especificações de material e avaliações de clientes.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/catalogo.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <a href="index.html" class="logo-link">
+            <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
+        </a>
+        <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+        <nav id="nav-menu">
+            <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
+            <li><a href="orcamento.html">Orçamento</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cabecalho-pagina">
+        <h1>Nosso Catálogo de Persianas</h1>
+        <p>Filtre por categoria e escolha o modelo perfeito para o seu projeto.</p>
+        </section>
+
+        <section class="controles-filtro">
+        <div class="filtro-box">
+            <label for="filtro-categoria">Filtrar por Categoria:</label>
+            <select id="filtro-categoria">
+            <option value="todas">Todas as Categorias</option>
+            <option value="rolo">Rolo</option>
+            <option value="romana">Romana</option>
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+            <option value="painel">Painel</option>
+            <option value="plissada">Plissada</option>
+            <option value="celular">Celular</option>
+            </select>
+        </div>
+        <span id="contador-produtos">Carregando itens...</span>
+        </section>
+
+        <section class="catalogo-grid">
+        <div id="container-produtos" class="grid-produtos"></div>
+        </section>
+    </main>
+
+    <div id="modal-detalhes" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-conteudo">
+        <button id="fechar-modal" aria-label="Fechar janela modal">&times;</button>
+        <div id="conteudo-modal"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 A.M. Cortinas e Persianas • Desenvolvido por Vinicius de Oliveira Collaço</p>
+        <p><a href="atribuicoes.html">Atribuições de Recursos</a> | <a href="https://youtu.be/SEU_VIDEO_AQUI" target="_blank" rel="noopener">Vídeo de Demonstração WDD231</a></p>
+    </footer>
+
+    <script type="module" src="estilos/catalogo.js"></script>
+</body>
+</html>

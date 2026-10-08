@@ -27,6 +27,10 @@ h1, h2, h3, h4 {
     color: var(--cor-primaria);
 }
 
+.header-container h1{
+    color: var(--cor-card);
+}
+
 /* Header e Navegação */
 header {
     background-color: var(--cor-primaria);

@@ -9,4 +9,12 @@ export function inicializarMenu() {
         btnHamburguer.setAttribute('aria-expanded', aberto ? 'true' : 'false');
         btnHamburguer.textContent = aberto ? '✕' : '☰';
     });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && navMenu.classList.contains('aberto')) {
+            navMenu.classList.remove('aberto');
+            btnHamburguer.setAttribute('aria-expanded', 'false');
+            btnHamburguer.textContent = '☰';
+        }
+    });
 }

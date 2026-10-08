@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensagem = parametros.get('mensagem') || 'Nenhuma observação enviada.';
 
     conteinerResumo.innerHTML = `
-        <ul class="lista-resumo">
-        <li><strong>Nome do Solicitante:</strong> ${escapeHtml(nome)}</li>
-        <li><strong>E-mail de Contato:</strong> ${escapeHtml(email)}</li>
-        <li><strong>Telefone / WhatsApp:</strong> ${escapeHtml(telefone)}</li>
-        <li><strong>Serviço Solicitado:</strong> ${escapeHtml(servico)}</li>
-        <li><strong>Observações / Medidas:</strong> ${escapeHtml(mensagem)}</li>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><strong>Nome do Solicitante:</strong> ${escapeHtml(nome)}</li>
+            <li style="margin-bottom: 0.5rem;"><strong>E-mail de Contato:</strong> ${escapeHtml(email)}</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Telefone / WhatsApp:</strong> ${escapeHtml(telefone)}</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Serviço Solicitado:</strong> ${escapeHtml(servico)}</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Observações / Medidas:</strong> ${escapeHtml(mensagem)}</li>
         </ul>
     `;
 });
@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function escapeHtml(string) {
     return String(string).replace(/[&<>"']/g, function (s) {
         return {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;'
         }[s];
     });
 }

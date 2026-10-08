@@ -10,52 +10,60 @@
     <meta property="og:title" content="A.M. Cortinas e Persianas | Elegância e Qualidade">
     <meta property="og:description" content="Encontre a persiana ideal para o seu ambiente com instalação profissional.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://seurepositorio.github.io/wdd231/final/imagens/og_img.webp">
+    <meta property="og:url" content="https://viniciuscollasso.github.io/wdd231/final/index.html">
+    <meta property="og:image" content="https://viniciuscollasso.github.io/wdd231/final/imagens/og_img.webp">
 
-    <link rel="icon" href="favicon.svg" type="image/x-icon">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/large.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-        <a href="index.html" class="logo-link">
-            <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
-        </a>
-        <h1>A.M Cortinas e Persianas</h1>
-        <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
-        <nav id="nav-menu">
-            <ul>
-            <li><a href="index.html" class="ativo">Início</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-            </ul>
-        </nav>
+            <div class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
+                </a>
+                <span class="logo-texto">A.M Cortinas e Persianas</span>
+            </div>
+            <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="ativo">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="orcamento.html">Orçamento</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="hero">
-        <div class="hero-conteudo">
-            <img src="imagens/hero.webp" alt="Visão da A.M Cortinas e persianas" class="hero-img" width="1200" height="500">
-            <h1>Cortinas e Persianas Sob Medida para o Seu Espaço</h1>
-            <p>Soluções modernas em escurecimento, controle térmico e decoração com atendimento especializado.</p>
-            <a href="orcamento.html" class="btn-cta">Solicitar Medição Gratuita</a>
-        </div>
+            <div class="hero-bg">
+                <img src="imagens/hero.webp" alt="Visão da A.M Cortinas e persianas" width="1200" height="500">
+            </div>
+            <div class="hero-overlay">
+                <div class="hero-conteudo">
+                    <h1>Cortinas e Persianas Sob Medida para o Seu Espaço</h1>
+                    <p>Soluções modernas em escurecimento, controle térmico e decoração com atendimento especializado.</p>
+                    <a href="orcamento.html" class="btn-cta">Solicitar Medição Gratuita</a>
+                </div>
+            </div>
         </section>
 
         <section class="destaques">
-        <h2>Destaques do Catálogo</h2>
-        <div id="container-produtos" class="grid-produtos"></div>
+            <h2>Destaques do Catálogo</h2>
+            <div id="container-produtos" class="grid-produtos"></div>
         </section>
     </main>
 
     <div id="modal-detalhes" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titulo-modal">
         <div class="modal-conteudo">
-        <button id="fechar-modal" aria-label="Fechar janela modal">&times;</button>
-        <div id="conteudo-modal"></div>
+            <button id="fechar-modal" aria-label="Fechar janela modal">&times;</button>
+            <div id="conteudo-modal"></div>
         </div>
     </div>
 
@@ -64,6 +72,6 @@
         <p><a href="atribuicoes.html">Atribuições de Recursos</a> | <a href="https://youtu.be/SEU_VIDEO_AQUI" target="_blank" rel="noopener">Vídeo de Demonstração WDD231</a></p>
     </footer>
 
-    <script type="module" src="estilos/catalogo.js"></script>
+    <script type="module" src="scripts/catalogo.js"></script>
 </body>
 </html>

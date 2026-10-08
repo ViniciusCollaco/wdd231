@@ -10,64 +10,69 @@
     <meta property="og:title" content="Catálogo de Persianas Sob Medida">
     <meta property="og:description" content="Confira nossos modelos com fotos, especificações de material e avaliações de clientes.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://seurepositorio.github.io/wdd231/final/imagens/og_img.webp">
+    <meta property="og:url" content="https://viniciuscollasso.github.io/wdd231/final/catalogo.html">
+    <meta property="og:image" content="https://viniciuscollasso.github.io/wdd231/final/imagens/og_img.webp">
 
-    <link rel="icon" href="favicon.svg" type="image/x-icon">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/main.css">
-    <link rel="stylesheet" href="estilos/catalogo.css">
+    <link rel="stylesheet" href="estilos/large.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-        <a href="index.html" class="logo-link">
-            <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
-        </a>
-        <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
-        <nav id="nav-menu">
-            <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
-            <li><a href="orcamento.html">Orçamento</a></li>
-            </ul>
-        </nav>
+            <div class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
+                </a>
+                <span class="logo-texto">A.M Cortinas e Persianas</span>
+            </div>
+            <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
+                    <li><a href="orcamento.html">Orçamento</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
         <section class="cabecalho-pagina">
-        <h1>Nosso Catálogo de Persianas</h1>
-        <p>Filtre por categoria e escolha o modelo perfeito para o seu projeto.</p>
+            <h1 style="text-align: center;">Nosso Catálogo de Persianas</h1>
+            <p style="text-align: center; margin-bottom: 1.5rem;">Filtre por categoria e escolha o modelo perfeito para o seu projeto.</p>
         </section>
 
-        <section class="controles-filtro">
-        <div class="filtro-box">
-            <label for="filtro-categoria">Filtrar por Categoria:</label>
-            <select id="filtro-categoria">
-            <option value="todas">Todas as Categorias</option>
-            <option value="rolo">Rolo</option>
-            <option value="romana">Romana</option>
-            <option value="horizontal">Horizontal</option>
-            <option value="vertical">Vertical</option>
-            <option value="painel">Painel</option>
-            <option value="plissada">Plissada</option>
-            <option value="celular">Celular</option>
-            </select>
-        </div>
-        <span id="contador-produtos">Carregando itens...</span>
+        <section class="controles-filtro" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <div class="filtro-box">
+                <label for="filtro-categoria">Filtrar por Categoria:</label>
+                <select id="filtro-categoria">
+                    <option value="todas">Todas as Categorias</option>
+                    <option value="rolo">Rolo</option>
+                    <option value="romana">Romana</option>
+                    <option value="horizontal">Horizontal</option>
+                    <option value="vertical">Vertical</option>
+                    <option value="painel">Painel</option>
+                    <option value="plissada">Plissada</option>
+                    <option value="celular">Celular</option>
+                </select>
+            </div>
+            <span id="contador-produtos" style="font-weight: 700; color: var(--cor-primaria);">Carregando itens...</span>
         </section>
 
         <section class="catalogo-grid">
-        <div id="container-produtos" class="grid-produtos"></div>
+            <div id="container-produtos" class="grid-produtos"></div>
         </section>
     </main>
 
     <div id="modal-detalhes" class="modal" aria-hidden="true" role="dialog">
         <div class="modal-conteudo">
-        <button id="fechar-modal" aria-label="Fechar janela modal">&times;</button>
-        <div id="conteudo-modal"></div>
+            <button id="fechar-modal" aria-label="Fechar janela modal">&times;</button>
+            <div id="conteudo-modal"></div>
         </div>
     </div>
 
@@ -76,6 +81,6 @@
         <p><a href="atribuicoes.html">Atribuições de Recursos</a> | <a href="https://youtu.be/SEU_VIDEO_AQUI" target="_blank" rel="noopener">Vídeo de Demonstração WDD231</a></p>
     </footer>
 
-    <script type="module" src="estilos/catalogo.js"></script>
+    <script type="module" src="scripts/catalogo.js"></script>
 </body>
 </html>

@@ -1,9 +1,25 @@
 import { lugaresInteresse } from '../data/lugares.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
+    configurarMenuHamburguer();
     gerenciarMensagemVisita();
     renderizarPontosInteresse();
+    configurarRodape();
 });
+
+function configurarMenuHamburguer() {
+    const btnMenu = document.querySelector('#btnMenu');
+    const navMenu = document.querySelector('#navMenu');
+
+    if (!btnMenu || !navMenu) return;
+
+    btnMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        const aberto = navMenu.classList.contains('open');
+        btnMenu.setAttribute('aria-expanded', aberto);
+        btnMenu.innerHTML = aberto ? '&times;' : '&#9776;';
+    });
+}
 
 function gerenciarMensagemVisita() {
     const elementoMensagem = document.querySelector('#mensagemVisita');
@@ -54,4 +70,16 @@ function renderizarPontosInteresse() {
 
         containerGrade.appendChild(cartao);
     });
+}
+
+function configurarRodape() {
+    const anoAtual = document.querySelector('#anoAtual');
+    const ultimaModificacao = document.querySelector('#ultimaModificacao');
+
+    if (anoAtual) {
+        anoAtual.textContent = new Date().getFullYear();
+    }
+    if (ultimaModificacao) {
+        ultimaModificacao.textContent = `Última modificação: ${document.lastModified}`;
+    }
 }

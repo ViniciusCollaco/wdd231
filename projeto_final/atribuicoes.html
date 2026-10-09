@@ -19,30 +19,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/normalize.css">
     <link rel="stylesheet" href="estilos/main.css">
+    <link rel="stylesheet" href="estilos/large.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo-link">
-                <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
-            </a>
-            <span class="logo-texto">A.M Cortinas e Persianas</span>
+            <div class="logo-box">
+                <a href="index.html" class="logo-link">
+                    <img src="imagens/logo.webp" alt="Logotipo A.M. Cortinas e Persianas" width="180" height="50">
+                </a>
+                <span class="logo-texto">A.M Cortinas e Persianas</span>
+            </div>
+            <button id="btn-menu" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="orcamento.html">Orçamento</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
-        <h1>Atribuições e Créditos de Imagens</h1>
-        <ul style="margin: 1.5rem 0; padding-left: 1.5rem;">
-            <li style="margin-bottom:0.5rem;">Fontes de texto: <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts (Montserrat e Open Sans)</a></li>
-            <li style="margin-bottom:0.5rem;">Imagens das persianas: <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a> e geradas por IA (Gemini).</li>
-            <li style="margin-bottom:0.5rem;">Ícones do sistema: Caracteres Unicode e SVG semântico nativo.</li>
+    <main class="atribuicoes-main">
+        <h1 class="atribuicoes-titulo">Atribuições e Créditos de Imagens</h1>
+        
+        <ul class="atribuicoes-lista">
+            <li><strong>Fontes de texto:</strong> <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts (Montserrat e Open Sans)</a></li>
+            <li><strong>Imagens das persianas:</strong> <a href="https://unsplash.com/" target="_blank" rel="noopener">Unsplash</a> e geradas por IA (Gemini).</li>
+            <li><strong>Ícones do sistema:</strong> Caracteres Unicode e SVG semântico nativo.</li>
         </ul>
-        <p><a href="index.html">← Voltar para a Página Inicial</a></p>
     </main>
 
     <footer>
         <p>&copy; 2026 A.M. Cortinas e Persianas • Desenvolvido por Vinicius de Oliveira Collaço</p>
         <p><a href="atribuicoes.html">Atribuições de Recursos</a> | <a href="https://youtu.be/SEU_VIDEO_AQUI" target="_blank" rel="noopener">Vídeo de Demonstração WDD231</a></p>
     </footer>
+
+    <script type="module" src="scripts/obrigado.js"></script>
 </body>
 </html>

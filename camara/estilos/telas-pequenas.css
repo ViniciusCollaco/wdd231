@@ -536,3 +536,9 @@ dialog li {
 .btn-saiba-mais:hover {
     background-color: #2b6cb0;
 }
+
+.layout-sobre h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #0f2942;
+}
